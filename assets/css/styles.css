@@ -1,0 +1,800 @@
+  @font-face {
+    font-family: 'HelveticaNeueLTPro67MediumCondensed';
+    src: url('../fonts/HelveticaNeueLTPro-MdCn.eot');
+    src: url('../fonts/HelveticaNeueLTPro-MdCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-MdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-MdCn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeueCondensed';
+    src: url('../fonts/HelveticaNeue-Condensed.eot');
+    src: url('../fonts/HelveticaNeue-Condensed.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Condensed.woff') format('woff'), url('../fonts/HelveticaNeue-Condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeueLTPro47LightCondensed';
+    src: url('../fonts/HelveticaNeueLTPro-LtCn.eot');
+    src: url('../fonts/HelveticaNeueLTPro-LtCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-LtCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-LtCn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeueLTPro-BdCn';
+    src: url('../fonts/HelveticaNeueLTPro-BdCn.eot');
+    src: url('../fonts/HelveticaNeueLTPro-BdCn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-BdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-BdCn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeueLTPro57Condensed';
+    src: url('../fonts/HelveticaNeueLTPro-Cn.eot');
+    src: url('../fonts/HelveticaNeueLTPro-Cn.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTPro-Cn.woff') format('woff'), url('../fonts/HelveticaNeueLTPro-Cn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Texto Footer */
+  @font-face {
+    font-family: HelveticaNeue-Condensed;
+    src: url(/crediexpressrotativo/fonts/HelveticaNeue-Condensed.otf);
+  }
+
+  .helveticaCondensed {
+    font-family: 'HelveticaNeueCondensed';
+  }
+
+  .HelveticaNeueLTPro47LightCondensed {
+    font-family: 'HelveticaNeueLTPro47LightCondensed';
+  }
+
+  .helveticaNeueLTPro77BoldCondensed {
+    font-family: 'HelveticaNeueLTPro-BdCn';
+  }
+
+  .HelveticaNeueLTPro57Condensed {
+    font-family: 'HelveticaNeueLTPro57Condensed';
+  }
+
+  .HelveticaNeueLTPro67MediumCondensed {
+    font-family: 'HelveticaNeueLTPro67MediumCondensed';
+  }
+
+  .shadow {
+    text-shadow: 1px 1px #000;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'HelveticaNeueLTPro-MdCn';
+  }
+
+
+  /* Footer */
+  .footerbg {
+    background: #313131;
+  }
+
+  .footerbox {}
+
+  .footervigilado {
+    margin: 20px 0%;
+    padding-left: 5%;
+  }
+
+  .footerderechos {
+    margin: 18px 0 10px 0;
+  }
+
+  .footerseparator {
+    margin: 1% 0%;
+  }
+
+  .footertext {
+    font-family: HelveticaNeue-Condensed;
+    font-size: 12pt;
+    color: #ffff;
+  }
+
+  .logofooter {
+    margin: 1% 0;
+    padding-right: 4%;
+  }
+
+
+  /*estilos prueba*/
+  .containertxtb1 {
+    margin-top: 150px;
+    /* float: right; */
+  }
+
+  .textobanner1 {
+    text-align: right;
+    font-family: HelveticaNeueLTPro47LightCondensed;
+    font-size: 31pt;
+    line-height: 40px;
+  }
+
+  .botonbanner1 {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .ngbanner {
+    font-family: HelveticaNeueLTPro-BdCn;
+  }
+
+  /**/
+
+
+  .atencionPanel {
+    height: 50px;
+    padding: 20px;
+  }
+
+  .panelImagen1 {
+    height: 1280px;
+    background-image: url(../images/imagen1.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+  }
+
+  .panel3 {
+    background: #fff;
+  }
+
+  .contenedorTextoFinanzas {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .panelTabla {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .contenedorPrimero {
+    width: 100%;
+    margin-top: 6%;
+    margin-left: 4%;
+  }
+
+  .conozcaComo {
+    overflow: hidden;
+    padding: 0;
+    background: url(../images/imagenTarjetaCredito.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 428px;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .fondoPanel1 {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    position: absolute;
+    /*overflow: hidden;*/
+    padding: 0;
+  }
+
+  .fondoPanel {
+    width: 100%;
+    height: 400px;
+    z-index: 0;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .col-md8 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+  }
+
+  .tituloImagen1 {
+    color: #333;
+    font-size: 2em;
+    text-align: right;
+  }
+
+  .gris1 {
+    color: #4c4c4c;
+  }
+
+  .rojo {
+    color: #ed1c27;
+  }
+
+  .blanco {
+    color: white;
+  }
+
+  .tamano1 {
+    font-size: 1.4em;
+  }
+
+  table {
+    width: 100%;
+    border: #fff;
+    font-size: 1.3em;
+  }
+
+  table thead tr th {
+    background: #666666;
+    height: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  table tbody tr td {
+    text-align: center;
+    background: #F1F1F1;
+    border-color: #fff;
+  }
+
+  .vcenter {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+  }
+
+  #panelCalculadora {
+    background: #F1F1F1;
+  }
+
+  .footer {
+    background: #2F2F2F;
+    height: 50px;
+    color: #fff;
+  }
+
+  .centrarVerticalmente {
+    white-space: nowrap;
+  }
+
+  .textoParrafos {
+    font-size: 1.7em;
+  }
+
+  .textoParrafos2 {
+    font-size: 1.4em;
+  }
+
+  .textoParrafos3 {
+    font-size: 1.1em;
+  }
+
+  .topBuffer50 {
+    margin-top: 50px;
+  }
+
+  .topBuffer20 {
+    margin-top: 20px;
+  }
+
+  select {
+    height: 30px;
+    min-width: 139px;
+    padding-left: 10px;
+    background: #fff;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+  }
+
+  .btnCalcular {
+    margin: 0;
+    padding: 0;
+    min-height: 68px;
+    min-width: 164px;
+    border: 0;
+    background: url(../images/btn_consultar_R.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .btnExportar {
+    margin: 0;
+    padding: 0;
+    min-height: 68px;
+    min-width: 164px;
+    border: 0;
+    background: url(../images/btn_exportar_R_O.png);
+    margin-left: -107px;
+  }
+
+  .btnCalcular:hover {
+    background: url(../images/btn_consultar_R_O.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .btnExportar:hover {
+    background: url(../images/btn_exportar_R_O.png);
+    margin-left: -107px;
+  }
+
+  .fuente41 {
+    font-size: 41px;
+  }
+
+  .fuente37 {
+    font-size: 37px;
+    line-height: 40px;
+  }
+
+  .fuente25 {
+    font-size: 25px;
+  }
+
+  .fuente20 {
+    font-size: 20px;
+  }
+
+  .fuente31 {
+    font-size: 31px;
+  }
+
+  .bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .btnPregunta {
+    margin-top: -10px;
+  }
+
+  .customToolTip {
+    background: #000 !important;
+    color: #fff !important;
+    width: 25% !important;
+    padding: 10px !important;
+    font-family: 'HelveticaNeueLTPro57Condensed' !important;
+    opacity: 0.9;
+    filter: alpha(opacity=0.9);
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      background: #F1F1F1;
+      overflow-x: hidden !important;
+    }
+
+    .header {
+      background: #ed1c27;
+      height: 90px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .panel-imagen-lateral {
+      overflow: hidden;
+      max-height: 170px !important;
+      /*height: 1000px;*/
+      padding: 0;
+      background: #F1F1F1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    input[type=text] {
+      height: 30px;
+      max-width: 70px;
+      padding-left: 10px;
+      border-radius: 14px 14px 14px 14px;
+      -moz-border-radius: 14px 14px 14px 14px;
+      -webkit-border-radius: 14px 14px 14px 14px;
+    }
+
+    .fuente20Movil {
+      font-size: 15px !important;
+    }
+
+    .anchoMovil {
+      min-width: 30px;
+      max-width: 100px;
+    }
+
+    .fuenteMovil {
+      font-size: 0.6em;
+    }
+
+    .fuenteErrorMovil {
+      font-size: 0.6em;
+    }
+
+    .largo150 {
+      min-width: 150px;
+    }
+
+    .largo300 {
+      min-width: 300px;
+    }
+
+    .fuenteTitulosMovil {
+      font-size: 1.8em;
+    }
+
+    .imagenTiendas img {
+      width: 100%;
+    }
+
+    .panelDerechoFinanzas {
+      overflow: hidden;
+      padding: 0;
+      background: #F1F1F1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .btnFinanzasCasa {
+      position: absolute;
+      height: 200px !important;
+      left: -0px !important;
+      top: -160px !important;
+      text-align: left !important;
+      white-space: nowrap;
+      max-height: 216px;
+      z-index: 999;
+    }
+
+    .btnFinanzasCasa img {
+      display: none;
+      /*max-width: 70px;*/
+    }
+
+    .footer img {
+      max-width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border: #fff;
+      font-size: 0.7em;
+    }
+
+    table thead tr th {
+      background: #666666;
+      height: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    table tbody tr td {
+      text-align: center;
+      background: #F1F1F1;
+      border-color: #fff;
+    }
+
+    .panelMano {
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .imagenMano {
+      position: absolute;
+      left: 56%;
+      top: 52%;
+      overflow: hidden;
+    }
+
+    .imagenMano img {
+      width: 170px;
+      height: 194px;
+    }
+
+    .margenInferiorMovil {
+      margin-bottom: 30px;
+    }
+
+    .ocultar {
+      display: none;
+    }
+
+    .imagenHagaCuentas img {
+      width: 50%;
+    }
+
+    .panelFinanzas {
+      background: #f1f1f1;
+      position: relative;
+      height: 320px;
+    }
+
+    .small {
+      margin-left: 150px;
+    }
+
+    .logof {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .header {
+      background: #ed1c27;
+      height: 90px;
+      padding: 20px;
+    }
+
+    .panel-imagen-lateral {
+      overflow: hidden;
+      /*height: 1000px;*/
+      padding: 0;
+      background: url(../images/imagen2.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    input[type=text] {
+      height: 30px;
+      padding-left: 10px;
+      border-radius: 14px 14px 14px 14px;
+      -moz-border-radius: 14px 14px 14px 14px;
+      -webkit-border-radius: 14px 14px 14px 14px;
+    }
+
+    .panelDerechoFinanzas {
+      overflow: hidden;
+      padding: 0;
+      background: url(../images/tercera.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .btnFinanzasCasa {
+      position: absolute;
+      white-space: nowrap;
+      max-height: 216px;
+      z-index: 999;
+    }
+
+    table {
+      width: 100%;
+      border: #fff;
+      font-size: 1.3em;
+    }
+
+    table thead tr th {
+      background: #666666;
+      height: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    table tbody tr td {
+      text-align: center;
+      background: #F1F1F1;
+      border-color: #fff;
+    }
+
+    .imagenMano {
+      left: 50%;
+      margin-top: 20px;
+      position: absolute;
+    }
+
+    .ancho150 {
+      width: 140px;
+    }
+
+    .fuenteErrorMovil {
+      font-size: 1.1em;
+    }
+
+    .fuenteMovil {
+      font-size: 1.1em;
+    }
+
+    .panelFinanzas {
+      background: #f1f1f1;
+      position: relative;
+      /*padding-top: 3%; padding-bottom: 3%;*/
+    }
+
+    @media only screen and (min-width: 1280px) {
+      .ancho150 {
+        width: 126px;
+      }
+
+      .form-group {
+        margin-left: -14px;
+      }
+    }
+
+    @media only screen and (min-width: 1054px) {
+      .ancho150 {
+        width: 126px;
+      }
+
+      .form-group {
+        margin-left: -14px;
+      }
+
+      #fechaCorte {
+        min-width: 134px;
+      }
+
+      .btnPregunta2 {
+        margin-left: -14px;
+      }
+      .btnPregunta3 {
+        margin-left: -30px;
+      }
+
+      .largo300 {
+        margin-left: 14px;
+      }
+
+      .small {
+        margin-left: 178px;
+      }
+    }
+
+    /* Responsive */
+
+    .padding_left {
+      padding-left: 165px;
+    }
+
+    .padding_right {
+      padding-right: 165px;
+    }
+
+    @media(max-width: 767px) {
+      .modal {
+        left: 6px;
+        width: 95%;
+      }
+
+      .padding_left {
+        padding-left: 25px;
+      }
+
+      .padding_right {
+        padding-right: 25px;
+      }
+    }
+
+    @media(min-width: 768px) {
+      .modal-content {
+        width: 538px;
+      }
+    }
+
+    /* Web */
+
+    .red_band {
+      background: #ed1c27;
+      height: 15px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .modal-content {
+      border-radius: 20px;
+      color: #EAEAEA;
+    }
+
+    .modal-text {
+      color: #5F5F5F;
+      font-family: helvetica-neue-57;
+    }
+
+    .modal-title {
+      color: #D31A22;
+      /* font-family: normal; */
+      font-size: 20px;
+    }
+
+    .modal-header {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    .modal-header .close {
+      padding: 1rem 2rem;
+    }
+
+    .center_content {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+
+    .left_content {
+      padding-bottom: 15px;
+    }
+
+    label {
+      color: #5F5F5F;
+      font-family: 'HelveticaNeueLTPro47LightCondensed';
+      font-size: 15px;
+    }
+
+    label {
+      display: inline-block;
+      width: 60%;
+      text-align: left;
+    }
+
+
+    /*Cursos Rise*/
+    .content-caps {
+      margin: 3rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .img_err img {
+      display: none;
+    }
+
+    .img_err p {
+      min-height: 180px;
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, .3);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .content-avance-rise {
+      display: flex;
+      flex-direction: row;
+      padding: 0 20px;
+    }
+
+    .content-avance-rise label {
+      padding-right: 1rem;
+      width: auto;
+    }
+
+    .content-avance-rise .avance-meta {
+      width: 100%;
+      height: 1em;
+      background-color: #ccc;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      border-radius: 5px;
+      margin-top: 2px;
+    }
+
+    .content-avance-rise .avance-meta-linea {
+      background-color: #e10518;
+      height: 1em;
+      border-radius: 5px;
+      width: 0%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .content-caps {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }

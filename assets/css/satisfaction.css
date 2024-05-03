@@ -1,0 +1,36 @@
+.content-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.face {
+    cursor: pointer;
+    filter: invert(0.5);
+    /* margin: 1rem; */
+}
+
+.face:hover {
+    filter: none;
+}
+
+.face-click {
+    filter: none;
+}
+
+.btn_guardar {
+    margin: 1rem;
+    background: #ff1523;
+    color: white;
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.div_save {
+    justify-content: center;
+}
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+}

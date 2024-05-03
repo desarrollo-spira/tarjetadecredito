@@ -1,0 +1,11 @@
+.link_content_blank{
+    position: relative;
+}
+
+.link_content_blank_div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

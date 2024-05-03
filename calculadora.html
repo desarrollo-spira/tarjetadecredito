@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculadora Davivienda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <link rel="stylesheet" href="assets/ui/jquery.ui.core.min.css" />
+        <link rel="stylesheet" href="assets/ui/jquery.ui.theme.min.css" />
+        <link rel="stylesheet" href="assets/ui/jquery.ui.datepicker.min.css" />
+        
+        <style>
+            body{opacity: 1; filter: alpha(opacity=1)}
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body style="background-color:#F6EFE4;">
+        <div class="row">
+            <div class="col-md-6 textoParrafos3 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                <div class="col-md-12 col-xs-12 text-center">
+                    <img  style="margin-bottom: 30px;" alt="Calculadora" src="assets/images/img_simulador-de-intereses.png" />
+                    <span class="rojo text-left HelveticaNeueLTPro47LightCondensed fuente37">SIMULADOR <span class="HelveticaNeueLTPro67MediumCondensed">DE INTERESES</span></span>
+                </div>
+                <form name="calculadora" id="calculadora" class="fuente20 HelveticaNeueLTPro57Condensed" data-toggle="validator" role="form">
+                    <div class="row">
+                        <p>Tasa facturación</p>
+                    </div>
+                    <div class="row">
+                        <div class="">
+                            <div class="col-md-6 col-xs-6">
+                                <div class="form-group">
+                                    <img src="assets/images/btn_pregunta_-.png" class="btnPregunta" alt="" title="Ingrese la tasa Efectiva Anual vigente al momento del uso al que desea calcular los intereses." />
+                                    <label for="ea">
+                                        <input type="text" id="ea" name="ea" required data-error="Por favor, ingrese sólo números, separe los decimales con el signo '.'" pattern="^\d+(\.\d{1,4})?$" />E.A.
+                                    </label>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors fuenteErrorMovil"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <label>
+                                    <input type="text" id="mv" name="mv" disabled />M.V.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Tipo de uso</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/btn_pregunta_-.png" class="btnPregunta2" alt="" title="Elija el Tipo de Utilización." />
+                            <select name="tipoUso" id="tipoUso">
+                                <option value="avance">Avance</option>
+                                <option value="compra">Compra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row topBuffer20">
+                        <div class="col-md-6 col-xs-6"><p>Valor</p></div>
+                        <div class="col-md-4 col-xs-4"><p>No cuotas</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <div class="form-group">
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta" alt="" title="Ingrese el Valor de la Transacción o uso. En el extracto se encuentra como 'Valor'." />
+                                <input pattern="^[0-9]+$" type="text" id="valor" class="largo150" data-error="Por favor, ingrese sólo números." name="valor" required />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors fuenteErrorMovil"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="assets/images/btn_pregunta_-.png" class="btnPregunta" alt="" title="Seleccione en Número de Cuotas a la cual fue diferida dicha utilización." />
+                            <select name="cuotas" id="cuotas">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4 fuente20Movil"><p>Fecha de transacción</p></div>
+                        <div class="col-md-4 col-xs-4 fuente20Movil"><p>Fecha de corte calendario</p></div>
+                        <div class="col-md-4 col-xs-4 fuente20Movil"><p>Fecha límite de pago</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la Fecha de Transacción que se encuentra registrada en su extracto." />
+                                <input type="text" id="fechaTransaccion" name="fechaTransaccion" class="js-datepicker fuenteMovil ancho150" data-error="Por favor seleccione una fecha." required/>
+                                <!--<span class="glyphicon glyphicon-calendar form-control-feedback ocultar" aria-hidden="true"></span>-->
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors fuenteErrorMovil"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la Fecha de Corte que está registrada en su extracto." />
+                                <!--<input type="text" id="fechaCorte" name="fechaCorte" class="js-datepicker" data-error="Por favor seleccione una fecha." required />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>-->
+                                <select name="fechaCorte" class="anchoMovil fuenteMovil" id="fechaCorte"></select>
+                                <!--<span class="glyphicon glyphicon-calendar form-control-feedback ocultar" aria-hidden="true"></span>-->
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <input type="text" id="fechaLimitePago" name="fechaLimitePago" class="js-datepicker fuenteMovil ancho150" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Email</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input class="col-md-12 col-xs-12 largo300" type="text" name="email" id="email" data-error="Por favor ingrese un correo electrónico válido, verifique que esté bien escrito y que no tenga mayúsculas o espacios." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required  />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors fuenteErrorMovil"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 text-right">
+                            <span class="small">Ej: nombre@email.com</span>
+                        </div>
+                    </div>
+                    <div class="row topBuffer20">
+                        <div class="form-group">
+                            <button class="btnCalcular" type="submit" id="calcular"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row panelTabla">
+            <div class="col-md-8 col-md-offset-3 col-xs-12 col-xs-offset-0 text-center">
+                <table border="1" id="tabla" class="col-xs-12">
+                    <thead>
+                        <tr>
+                            <th>Periodo</th>
+                            <th>Saldo Inicial</th>
+                            <th>Abono Capital</th>
+                            <th>Intereses</th>
+                            <th>Cuota</th>
+                            <th>Saldo Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/data11.js"></script>
+        <script type="text/javascript" src="assets/js/calculadora.js"></script>
+        <script type="text/javascript" src="assets/js/events.js"></script>
+
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script type="text/javascript" src="assets/ui/jquery.ui-1.10.4.datepicker.min.js"></script>
+        <script type="text/javascript" src="assets/js/validator.min.js"></script>
+    </body>
+</html>
