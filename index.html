@@ -514,8 +514,6 @@ and open the template in the editor.
                             </div>
                         </div>
 
-
-
                         <div class="row" id="emailSection" style="display:none;">
                             <div class="col-md-4">Email</div>
                         </div>
@@ -571,14 +569,14 @@ and open the template in the editor.
                         <div class="row">
                             <div class="col-md-6 col-xs-6" id="valorInputDolares" style="display:none;">
                                 <div class="form-group">
-                                    <img src="assets/images/btn_pregunta_-.png" style="" class="btnPreguntaD" alt="" data-toogle="tooltip" title='Ingrese el valor de la transacción o uso. En el extracto se encuentra como "Valor".' />
+                                    <img src="assets/images/btn_pregunta_-.png" style="" class="btnPregunta" alt="" data-toogle="tooltip" title='Ingrese el valor de la transacción o uso. En el extracto se encuentra como "Valor".' />
                                     <input pattern="^[0-9]+$" class="largo150" type="text" id="valorDolares" data-error="Por favor, ingrese sólo números." name="valorDolares" required />
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors fuenteErrorMovil"></div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-xs-4" id="cuotasDivDolares" style="display: none;">
-                                <img src="assets/images/btn_pregunta_-.png" style="margin-left:-27px;" class="btnPreguntaD" alt="" data-toogle="tooltip" title="Seleccione el número de cuotas a diferir la utilización." />
+                                <img src="assets/images/btn_pregunta_-.png" style="margin-left:-27px;" class="btnPregunta" alt="" data-toogle="tooltip" title="Seleccione el número de cuotas a diferir la utilización." />
                                 <select name="cuotasDolares" id="cuotasDolares">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -661,7 +659,7 @@ and open the template in the editor.
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaLimitesDolares" style="display:none;">
                                 <p class="control-label">Fecha límite de pago &nbsp; </p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Fecha de limite de pago" />
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPreguntaD ocultar" alt="" title="Fecha de limite de pago" />
                                 <input type="text" id="fechaLimitePagoDolares" name="fechaLimitePagoDolares" class="js-datepicker fuenteMovil width_three" disabled />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
@@ -752,8 +750,8 @@ and open the template in the editor.
                                     showElements(elementosPesos);
                                     hideElements(elementosDolares);
                                 } else if (moneda === "dolares") {
-                                    console.log("Mostrando elementos de dólares...");
                                     $("#calculadora").attr("id", "calculadoraDolares");
+                                    console.log("Mostrando elementos de dólares...");
                                     hideElements(elementosPesos);
                                     showElements(elementosDolares);
                                 }else {
@@ -1116,11 +1114,11 @@ and open the template in the editor.
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/data.js"></script>
     <script type="text/javascript" src="assets/js/jspdf.min.js"></script>
-    <script type="text/javascript" src="assets/js/calculadora.js"></script>
     <script type="text/javascript" src="assets/js/calculadoraDolares.js"></script>
+    <script type="text/javascript" src="assets/js/calculadora.js"></script>
     <script type="text/javascript" src="assets/js/cal2.js"></script>
-    <script type="text/javascript" src="assets/js/events.js"></script>
-    <script type="text/javascript" src="assets/js/eventsD.js"></script>
+
+
     <script type="text/javascript" src="assets/js/jspdf.plugin.autotable.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -1128,6 +1126,8 @@ and open the template in the editor.
     <script type="text/javascript" src="assets/js/validator.min.js"></script>
     <script type="text/javascript" src="assets/js/satisfaction.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="assets/js/eventsD.js"></script>
+    <script type="text/javascript" src="assets/js/events.js"></script>
 </body>
 
 </html>
