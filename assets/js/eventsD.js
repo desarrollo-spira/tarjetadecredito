@@ -39,7 +39,7 @@ $(document).ready(function () {
 	$('#fechaCorteDolares').change(function (f) {
 		if (calculadoraDolares.validarFechaTransaccionDolares()) {
 			if (calculadoraDolares.validarFechaCorteDolares()) {
-				calculadoraDolares.calcular();
+				calculadoraDolares.calcularDolares();
 			} else {
 				alert('La fecha de corte no es válida');
 			}

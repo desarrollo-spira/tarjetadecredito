@@ -8,7 +8,7 @@ var calculadoraDolares = (function () {
 		console.log('fechaLimitePagoDolares', fechaLimitePagoDolares);
 		var fechaValidaDolares = false;
 		for (var i = 0; i < calendario.length; i++) {
-			if (calendario[i][0] === fechaCorte) {
+			if (calendario[i][0] === fechaCorteDolares) {
 				fechaLimitePagoDolares.value = calendario[i][1];
 				fechaValidaDolares = true;
 				break;
@@ -104,9 +104,9 @@ var calculadoraDolares = (function () {
 
 		var date = new Date();
 		var saldoInicialDolares = '';
-		var abonoCapital = 0;
+		var abonoCapitalDolares = 0;
 		var intereses = 0;
-		var saldoFinal = 0;
+		var saldoFinalDolares = 0;
 		var cuotaDolares = 0;
 		var meses = new Array('Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic');
 
@@ -138,7 +138,7 @@ var calculadoraDolares = (function () {
 
 		console.log('valor: ' + valorDolares);
 		console.log('mv: ' + mvDolares.value);
-		console.log((valor * tasaFacturacionDolares.format(2, 0, ',', '.')) / 100);
+		console.log((valorDolares * tasaFacturacionDolares.format(2, 0, ',', '.')) / 100);
 
 		let mv_decimal = Math.pow(baseDolares, exponenteDolares) - 1;
 		let primera_cuota_1_ = Number(valorDolares) * mv_decimal;
@@ -159,7 +159,7 @@ var calculadoraDolares = (function () {
 			// primera_cuota_2.value = "$ " + Number(0).format(2, 3, '.', ',')
 			// primera_cuota_3.value = "$ " + Number(0).format(2, 3, '.', ',')
 
-			if (tipoUso === 'compra_cartera' || tipoUsoDolares === 'gasolina' || tipoUsoDolares === 'impuestos' || tipoUsoDolares === 'peajes' || tipoUsoDolares === 'PSE' || tipoUsoDolares === 'rediferido' || tipoUsoDolares === 'avance') {
+			if (tipoUsoDolares === 'compra_cartera' || tipoUsoDolares === 'gasolina' || tipoUsoDolares === 'impuestos' || tipoUsoDolares === 'peajes' || tipoUsoDolares === 'PSE' || tipoUsoDolares === 'rediferido' || tipoUsoDolares === 'avance') {
 				document.getElementById('text_left_share').style.display = 'block';
 				document.getElementById('left_share').style.display = 'block';
 				document.getElementById('right_share').style.display = 'block';
@@ -175,7 +175,7 @@ var calculadoraDolares = (function () {
 				date = transaccionDolares;
 				// date.setDate(date.getDate() + 30);
 				date.setMonth(date.getMonth() + 1);
-				saldoInicialDolares = valor;
+				saldoInicialDolares = valorDolares;
 				abonoCapitalDolares = Number(valorDolares) / Number(cuotasDolares);
 				if (tipoUsoDolares === 'compra_cartera' || tipoUsoDolares === 'gasolina' || tipoUsoDolares === 'impuestos' || tipoUsoDolares === 'peajes' || tipoUsoDolares === 'PSE' || tipoUsoDolares === 'rediferido' || tipoUsoDolares === 'avance') {
 					intereses = (Number(valorDolares) * ((tasaFacturacionDolares * d8Dolares) / 30)) / 100;
@@ -186,7 +186,7 @@ var calculadoraDolares = (function () {
 					intereses = 0;
 				}
 				cuotaDolares = abonoCapitalDolares + intereses;
-				saldoFinal = Number(valorDolares) - abonoCapital;
+				saldoFinalDolares = Number(valorDolares) - abonoCapitalDolares;
 
 				//nuevo requerimento
 				let segunda_cuota_1_;
@@ -206,11 +206,11 @@ var calculadoraDolares = (function () {
 						}
 					}
 				} else {
-					segunda_cuota_1_ = saldoFinal * mv_decimal;
+					segunda_cuota_1_ = saldoFinalDolares * mv_decimal;
 				}
 				segunda_cuota_1.value = '$ ' + Number(segunda_cuota_1_).format(2, 3, '.', ',');
 
-				let segunda_cuota_2_ = Number(abonoCapital) * mv_decimal;
+				let segunda_cuota_2_ = Number(abonoCapitalDolares) * mv_decimal;
 				segunda_cuota_2.value = '$ ' + Number(segunda_cuota_2_).format(2, 3, '.', ',');
 
 				let segunda_cuota_3_ = Number(segunda_cuota_2_) / 30;
@@ -286,7 +286,7 @@ var calculadoraDolares = (function () {
 				date.setMonth(date.getMonth() + 1);
 
 				saldoInicialDolares = saldoFinalDolares;
-				if (abonoCapitalDolares >= valor) {
+				if (abonoCapitalDolares >= valorDolares) {
 					abonoCapitalDolares = 0;
 				} else {
 					abonoCapitalDolares = Number(valorDolares) / Number(cuotasDolares);
@@ -304,7 +304,7 @@ var calculadoraDolares = (function () {
 				} else {
 					intereses = 0;
 				}
-				cuotaDolares = abonoCapitalDolares + interesesDolares;
+				cuotaDolares = abonoCapitalDolares + intereses;
 				saldoFinalDolares = saldoInicialDolares - abonoCapitalDolares;
 			}
 
