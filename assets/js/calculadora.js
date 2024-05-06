@@ -445,7 +445,7 @@ var calculadora = (function () {
 	var validarFechaCorte = function () {
 		var fechaCorte = document.getElementById('fechaCorte').value;
 		console.log('fechaCorte', fechaCorte);
-		var fechaLimitePago = document.getElementById('fechaLimitePago').value;
+		var fechaLimitePago = document.getElementById('fechaLimitePago');
 		console.log('fechaLimitePago', fechaLimitePago);
 		var fechaValidaDolares = false;
 		for (var i = 0; i < calendario.length; i++) {
@@ -485,6 +485,7 @@ var calculadora = (function () {
 	};
 
 	var calcularDolares = function () {
+		var valorUSD = 3800;
 		var ea = document.getElementById('ea').value;
 		var mv = document.getElementById('mv');
 		var tipoUsoDolares = document.getElementById('tipoUsoDolares').value;
@@ -531,7 +532,7 @@ var calculadora = (function () {
 
 		ea = ea.replace(',', '.');
 		ea = ea / 100;
-
+		valorDolares = valorDolares * valorUSD;
 		var baseDolares = 1 + Number(ea);
 		var exponenteDolares = 1 / 12;
 		var tasaFacturacionDolares = (Math.pow(baseDolares, exponenteDolares) - 1) * 100;
