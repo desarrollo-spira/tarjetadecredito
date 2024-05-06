@@ -353,13 +353,7 @@ and open the template in the editor.
                         <div class="row">
                             
                         </div>
-                        <div class="row">
-                            
-                        </div>
-
-                        <div class="row">
-                            
-                        </div>
+                    
                         <div class="row topBuffer20">
                             <div class="col-md-6 col-xs-6">
                                 <p>Moneda</p>
@@ -490,10 +484,6 @@ and open the template in the editor.
                             </div>
                         </div>
 
-                        
-
-                       
-                        
                          <!--TIPO DE USO DOLARES-->
                          <div class="row topBuffer20" id="tipoUsoDolaresD" style="display:none;">
                             <div class="col-md-6 col-xs-6">
@@ -755,6 +745,8 @@ and open the template in the editor.
                                     hideElements(elementosPesos);
                                     showElements(elementosFechas);
                                     showElements(elementosDolares);
+                                    limpiarDatos();
+                                    
                                 }else {
                                     console.log("Moneda no reconocida:", moneda);
                                 }
@@ -770,6 +762,10 @@ and open the template in the editor.
                                 elements.forEach(function(element) {
                                     element.style.display = "none";
                                 });
+                            }
+
+                            function limpiarDatos() {
+                                document.getElementById("valorPesos").reset();
                             }
                         
                             document.getElementById("moneda").addEventListener("change", function() {

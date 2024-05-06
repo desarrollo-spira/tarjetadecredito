@@ -885,9 +885,6 @@ var calculadora = (function () {
 		validarFechaTransaccionMasunMes: validarFechaTransaccionMasunMes,
 		calcular: calcular,
 		calcularMV: calcularMV,
-	
-		validarFechaCorte: validarFechaCorte,
-		validarFechaTransaccion: validarFechaTransaccion,
 		validarFechaTransaccionMasunMesDolares: validarFechaTransaccionMasunMesDolares,
 		calcularDolares: calcularDolares,
 		calcularMVDolares: calcularMVDolares,
