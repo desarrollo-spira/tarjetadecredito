@@ -534,7 +534,7 @@ and open the template in the editor.
                         </div>
                         
                          <!--TIPO DE USO DOLARES-->
-                         <div class="row topBuffer20" id="tipoUsoDolares" style="display:none;">
+                         <div class="row topBuffer20" id="tipoUsoDolaresD" style="display:none;">
                             <div class="col-md-6 col-xs-6">
                                 <p>Tipo de uso en Dólares</p>
                             </div>
@@ -646,21 +646,21 @@ and open the template in the editor.
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaTransaccionesDolares" style="display:none;">
                                 <p class="control-label">Fecha de transacción</p>
                                 <img src="assets/images/btn_pregunta_-.png" class="btnPreguntaD ocultar" alt="" title="Seleccione la fecha de transacción de la utilización." />
-                                <input type="text" id="fechaTransaccionDolares" name="fechaTransaccionDolares" class="js-datepicker fuenteMovil width_three" data-error="Por favor seleccione una fecha." required />
+                                <input type="text" id="fechaTransaccionDolares" name="fechaTransaccion" class="js-datepicker fuenteMovil width_three" data-error="Por favor seleccione una fecha." required />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors fuenteErrorMovil"></div>
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaCortesDolares" style="display:none;">
                                 <p class="control-label">Fecha de corte</p>
                                 <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de corte de su tarjeta de crédito." />
-                                <input type="text" id="fechaCorteDolares" name="fechaCorteDolares" class="fechaCorte fuenteMovil width_three" data-error="Seleccione la fecha de corte de su tarjeta de crédito." required />
+                                <input type="text" id="fechaCorteDolares" name="fechaCorte" class="fechaCorte fuenteMovil width_three" data-error="Seleccione la fecha de corte de su tarjeta de crédito." required />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaLimitesDolares" style="display:none;">
                                 <p class="control-label">Fecha límite de pago &nbsp; </p>
                                 <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Fecha de limite de pago" />
-                                <input type="text" id="fechaLimitePagoDolares" name="fechaLimitePagoDolares" class="js-datepicker fuenteMovil width_three" disabled />
+                                <input type="text" id="fechaLimitePagoDolares" name="fechaLimitePago" class="js-datepicker fuenteMovil width_three" disabled />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -724,7 +724,7 @@ and open the template in the editor.
                             document.getElementById("calcula")
                             ];
                             var elementosDolares = [ 
-                                document.getElementById("tipoUsoDolares"),
+                                document.getElementById("tipoUsoDolaresD"),
                                 document.getElementById("tipoUsoDolaresOptions"),
                                 document.getElementById("valorNDolares"),
                                 document.getElementById("numeroCuotasDolares"),
