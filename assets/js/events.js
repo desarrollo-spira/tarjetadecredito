@@ -122,18 +122,18 @@ $(document).ready(function () {
 	});
 
 	$('#fechaCorteDolares').change(function (f) {
-		if (calculadora.validarFechaTransaccionDolares()) {
-			if (calculadora.validarFechaCorteDolares()) {
+		if (calculadora.validarFechaTransaccion()) {
+			if (calculadora.validarFechaCorte()) {
 				calculadora.calcularDolares();
 			} else {
 				alert('La fecha de corte no es válida');
 			}
 		} else {
 			alert('La fecha de corte no es válida');
-			calculadora.validarFechaTransaccionDolares();
+			calculadora.validarFechaTransaccion();
 		}
 
-		if (calculadora.validarFechaTransaccionMasunMesDolares()) {
+		if (calculadora.validarFechaTransaccionMasunMes()) {
 			alert('Fecha de Corte no corresponde con Fecha de la Transacción');
 		}
 	});
@@ -141,8 +141,8 @@ $(document).ready(function () {
 	$('#calculadora')
 		.validator()
 		.on('submit', function (e) {
-			console.log('transaccion validar fecha transaccion ' + calculadora.validarFechaTransaccionDolares());
-			console.log('transaccion validar fecha transaccion mas un mes ' + calculadora.validarFechaTransaccionMasunMesDolares());
+			console.log('transaccion validar fecha transaccion ' + calculadora.validarFechaTransaccion());
+			console.log('transaccion validar fecha transaccion mas un mes ' + calculadora.validarFechaTransaccionMasunMes());
 
 			$('#panelLateralCalculadora').height($('#panelCalculadora').height());
 			// if (!e.isDefaultPrevented()) {

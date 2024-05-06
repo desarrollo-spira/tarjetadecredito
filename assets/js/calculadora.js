@@ -442,38 +442,38 @@ var calculadora = (function () {
 	 * 
 	 */
 
-	var validarFechaCorteDolares = function () {
-		var fechaCorteDolares = document.getElementById('fechaCorteDolares').value;
-		console.log('fechaCorteDolares', fechaCorteDolares);
-		var fechaLimitePagoDolares = document.getElementById('fechaLimitePagoDolares').value;
-		console.log('fechaLimitePagoDolares', fechaLimitePagoDolares);
+	var validarFechaCorte = function () {
+		var fechaCorte = document.getElementById('fechaCorte').value;
+		console.log('fechaCorte', fechaCorte);
+		var fechaLimitePago = document.getElementById('fechaLimitePago').value;
+		console.log('fechaLimitePago', fechaLimitePago);
 		var fechaValidaDolares = false;
 		for (var i = 0; i < calendario.length; i++) {
-			if (calendario[i][0] === fechaCorteDolares) {
-				fechaLimitePagoDolares.value = calendario[i][1];
+			if (calendario[i][0] === fechaCorte) {
+				fechaLimitePago.value = calendario[i][1];
 				fechaValidaDolares = true;
 				break;
 			}
 		}
-		if (!fechaValidaDolares) fechaLimitePagoDolares.value = '';
+		if (!fechaValidaDolares) fechaLimitePago.value = '';
 		return fechaValidaDolares;
 	};
 
-	var validarFechaTransaccionDolares = function () {
-		var fechaTransaccionDolares = document.getElementById('fechaTransaccionDolares').value;
-		var fechaCorteDolares = document.getElementById('fechaCorteDolares').value;
-		var transaccionDolares = convertirFecha(fechaTransaccionDolares);
-		var corteDolares = convertirFecha(fechaCorteDolares);
+	var validarFechaTransaccion = function () {
+		var fechaTransaccion = document.getElementById('fechaTransaccion').value;
+		var fechaCorte = document.getElementById('fechaCorte').value;
+		var transaccionDolares = convertirFecha(fechaTransaccion);
+		var corteDolares = convertirFecha(fechaCorte);
 
 		if (corteDolares >= transaccionDolares) return true;
 		return false;
 	};
 
 	var validarFechaTransaccionMasunMesDolares = function () {
-		var fechaTransaccionDolares = document.getElementById('fechaTransaccionDolares').value;
-		var fechaCorteDolares = document.getElementById('fechaCorteDolares').value;
-		var transaccionDolares = convertirFecha(fechaTransaccionDolares);
-		var corteDolares = convertirFecha(fechaCorteDolares);
+		var fechaTransaccion = document.getElementById('fechaTransaccion').value;
+		var fechaCorte = document.getElementById('fechaCorte').value;
+		var transaccionDolares = convertirFecha(fechaTransaccion);
+		var corteDolares = convertirFecha(fechaCorte);
 
 		transaccion_mas_un_mes = transaccionDolares;
 		transaccion_mas_un_mes.setMonth(transaccion_mas_un_mes.getMonth() + 1);
@@ -493,9 +493,9 @@ var calculadora = (function () {
 		console.log('valorDolares: ' + valorDolares);
 		var cuotasDolares = document.getElementById('cuotasDolares').value;
 		console.log('cuotasDolares: ' + cuotasDolares);
-		var fechaTransaccionDolares = document.getElementById('fechaTransaccionDolares').value;
-		var fechaCorteDolares = document.getElementById('fechaCorteDolares').value;
-		var fechaLimitePagoDolares = document.getElementById('fechaLimitePagoDolares').value;
+		var fechaTransaccion = document.getElementById('fechaTransaccion').value;
+		var fechaCorte = document.getElementById('fechaCorte').value;
+		var fechaLimitePago = document.getElementById('fechaLimitePago').value;
 		var emailDolares = document.getElementById('emailDolares').value;
 
 		var franquicia = document.getElementById('tipoFranquicia').value.toUpperCase();
@@ -525,9 +525,9 @@ var calculadora = (function () {
         var transaccion = new Date(fechaTransaccion);
         var corte = new Date(fechaCorte);
         var limitePago = new Date(fechaLimitePago);*/
-		var transaccionDolares = convertirFecha(fechaTransaccionDolares);
-		var corteDolares = convertirFecha(fechaCorteDolares);
-		var limitePagoDolares = convertirFecha(fechaLimitePagoDolares);
+		var transaccionDolares = convertirFecha(fechaTransaccion);
+		var corteDolares = convertirFecha(fechaCorte);
+		var limitePagoDolares = convertirFecha(fechaLimitePago);
 
 		ea = ea.replace(',', '.');
 		ea = ea / 100;
@@ -885,8 +885,8 @@ var calculadora = (function () {
 		calcular: calcular,
 		calcularMV: calcularMV,
 	
-		validarFechaCorteDolares: validarFechaCorteDolares,
-		validarFechaTransaccionDolares: validarFechaTransaccionDolares,
+		validarFechaCorte: validarFechaCorte,
+		validarFechaTransaccion: validarFechaTransaccion,
 		validarFechaTransaccionMasunMesDolares: validarFechaTransaccionMasunMesDolares,
 		calcularDolares: calcularDolares,
 		calcularMVDolares: calcularMVDolares,
@@ -907,7 +907,7 @@ function initComponent() {
 	});
 
 	/* Fecha de corte */
-	$('#fechaCorteDolares').datepicker({
+	$('#fechaCorte').datepicker({
 		dateFormat: 'dd/mm/yy',
 		onClose: function (selectedDate) {
 			$('.js-datepicker').datepicker('option', '+1M', selectedDate);
