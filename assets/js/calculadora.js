@@ -931,6 +931,7 @@ function initComponent() {
 			}
 		},
 	});
+}
 
 $(document).ready(function () {
 	/*initialisation des composants*/
@@ -992,3 +993,4 @@ function initComponent() {
 	//$("#dateRetrait").datepicker({showButtonPanel: true });
 	//$("#dateRetrait").datepicker({beforeShow: function() {setTimeout(function() {$(".ui-datepicker").css("z-index", 9999999999);}, 10);}});
 }
+});

@@ -122,34 +122,34 @@ $(document).ready(function () {
 	});
 
 	$('#fechaCorteDolares').change(function (f) {
-		if (calculadoraDolares.validarFechaTransaccionDolares()) {
-			if (calculadoraDolares.validarFechaCorteDolares()) {
-				calculadoraDolares.calcularDolares();
+		if (calculadora.validarFechaTransaccionDolares()) {
+			if (calculadora.validarFechaCorteDolares()) {
+				calculadora.calcularDolares();
 			} else {
 				alert('La fecha de corte no es válida');
 			}
 		} else {
 			alert('La fecha de corte no es válida');
-			calculadoraDolares.validarFechaTransaccionDolares();
+			calculadora.validarFechaTransaccionDolares();
 		}
 
-		if (calculadoraDolares.validarFechaTransaccionMasunMesDolares()) {
+		if (calculadora.validarFechaTransaccionMasunMesDolares()) {
 			alert('Fecha de Corte no corresponde con Fecha de la Transacción');
 		}
 	});
 
-	$('#calculadoraDolares')
+	$('#calculadora')
 		.validator()
 		.on('submit', function (e) {
-			console.log('transaccion validar fecha transaccion ' + calculadoraDolares.validarFechaTransaccionDolares());
-			console.log('transaccion validar fecha transaccion mas un mes ' + calculadoraDolares.validarFechaTransaccionMasunMesDolares());
+			console.log('transaccion validar fecha transaccion ' + calculadora.validarFechaTransaccionDolares());
+			console.log('transaccion validar fecha transaccion mas un mes ' + calculadora.validarFechaTransaccionMasunMesDolares());
 
 			$('#panelLateralCalculadora').height($('#panelCalculadora').height());
 			// if (!e.isDefaultPrevented()) {
 			e.preventDefault();
 			// if (calculadora.validarFechaCorteDolares()) {
 			//  if (calculadora.validarFechaTransaccion() && !calculadora.validarFechaTransaccionMasunMes()) {
-			calculadoraDolares.calcularDolares();
+			calculadora.calcularDolares();
 			$('.panelTabla').slideDown();
 			//  } else {
 			//      if (!calculadora.validarFechaTransaccion()) {
@@ -169,7 +169,7 @@ $(document).ready(function () {
 			// }
 		});
 
-	$('#calculadoraDolares')
+	$('#calculadora')
 		.validator()
 		.on('validated.bs.validator', function (e) {
 			//console.log("Validacion campo");
