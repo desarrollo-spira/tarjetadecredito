@@ -485,8 +485,8 @@ var calculadora = (function () {
 	};
 
 	var calcularDolares = function () {
-		var eaDolares = document.getElementById('ea').value;
-		var mvDolares = document.getElementById('mv');
+		var ea = document.getElementById('ea').value;
+		var mv = document.getElementById('mv');
 		var tipoUsoDolares = document.getElementById('tipoUsoDolares').value;
 		console.log('tipo uso: ' + tipoUsoDolares);
 		var valorDolares = document.getElementById('valorDolares').value;
@@ -529,8 +529,8 @@ var calculadora = (function () {
 		var corteDolares = convertirFecha(fechaCorteDolares);
 		var limitePagoDolares = convertirFecha(fechaLimitePagoDolares);
 
-		eaDolares = eaDolares.replace(',', '.');
-		eaDolares = eaDolares / 100;
+		ea = ea.replace(',', '.');
+		ea = ea / 100;
 
 		var baseDolares = 1 + Number(ea);
 		var exponenteDolares = 1 / 12;
@@ -541,7 +541,7 @@ var calculadora = (function () {
 		/*fecha limite de pago*/
 		var d9Dolares = (Date.parse(limitePagoDolares) - Date.parse(corteDolares)) / (1000 * 60 * 60 * 24);
 		//alert(d9);
-		mvDolares.value = tasaFacturacionDolares.format(2, 0, ',', '.') + '%';
+		mv.value = tasaFacturacionDolares.format(2, 0, ',', '.') + '%';
 
 		var date = new Date();
 		var saldoInicialDolares = '';
@@ -578,7 +578,7 @@ var calculadora = (function () {
 		dias_fecha_pago.value = resultado_diferencia_corte_pago;
 
 		console.log('valor: ' + valorDolares);
-		console.log('mv: ' + mvDolares.value);
+		console.log('mv: ' + mv.value);
 		console.log((valorDolares * tasaFacturacionDolares.format(2, 0, ',', '.')) / 100);
 
 		let mv_decimal = Math.pow(baseDolares, exponenteDolares) - 1;
@@ -866,7 +866,7 @@ var calculadora = (function () {
 
 	var calcularMVDolares = function () {
 		var eaDolares = document.getElementById('ea').value;
-		var mvDolares = document.getElementById('mv');
+		var mv = document.getElementById('mv');
 
 		eaDolares = eaDolares.replace(',', '.');
 		eaDolares = eaDolares / 100;
@@ -874,7 +874,7 @@ var calculadora = (function () {
 		var baseDolares = 1 + Number(eaDolares);
 		var exponenteDolares = 1 / 12;
 		var tasaFacturacionDolares = (Math.pow(baseDolares, exponenteDolares) - 1) * 100;
-		mvDolares.value = tasaFacturacionDolares.format(2, 0, ',', '.') + '%';
+		mv.value = tasaFacturacionDolares.format(2, 0, ',', '.') + '%';
 	};
 
 	return {
