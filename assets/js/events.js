@@ -93,7 +93,6 @@ $(document).ready(function () {
 			// }
 		});
 
-	$('#calculadora').validator('validate');
 
 	$('#calculadora')
 		.validator()
