@@ -35,7 +35,7 @@ var calculadoraDolares = (function () {
 		var corteDolares = convertirFecha(fechaCorteDolares);
 
 		transaccion_mas_un_mes = transaccionDolares;
-		transaccion_mas_un_mes.setMonth(transaccion_mas_un_mes.getMonth() + 2);
+		transaccion_mas_un_mes.setMonth(transaccion_mas_un_mes.getMonth() + 1);
 
 		console.log('la fecha es ' + transaccion_mas_un_mes);
 

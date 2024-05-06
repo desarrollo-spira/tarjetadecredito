@@ -652,14 +652,14 @@ and open the template in the editor.
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaCortesDolares" style="display:none;">
                                 <p class="control-label">Fecha de corte</p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPreguntaD ocultar" alt="" title="Seleccione la fecha de corte de su tarjeta de crédito." />
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de corte de su tarjeta de crédito." />
                                 <input type="text" id="fechaCorteDolares" name="fechaCorteDolares" class="fechaCorte fuenteMovil width_three" data-error="Seleccione la fecha de corte de su tarjeta de crédito." required />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaLimitesDolares" style="display:none;">
                                 <p class="control-label">Fecha límite de pago &nbsp; </p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPreguntaD ocultar" alt="" title="Fecha de limite de pago" />
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Fecha de limite de pago" />
                                 <input type="text" id="fechaLimitePagoDolares" name="fechaLimitePagoDolares" class="js-datepicker fuenteMovil width_three" disabled />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
@@ -695,12 +695,12 @@ and open the template in the editor.
                                         más )</span></a></label>
 
                         </div>
-                        <div class="row topBuffer20" id="calcular" style="display:none;">
+                        <div class="row topBuffer20" id="calcula" style="display:none;">
                             <div class="form-group">
                                 <button class="btnCalcular" type="submit" id="calcular"></button>
                             </div>
                         </div>
-                        <div class="row topBuffer20" id="calcularDolares" style="display:none;">
+                        <div class="row topBuffer20" id="calcularDolare" style="display:none;">
                             <div class="form-group">
                                 <button class="btnCalcular" type="submit" id="calcularDolares"></button>
                             </div>
@@ -722,7 +722,7 @@ and open the template in the editor.
                             document.getElementById("emailSection"),
                             document.getElementById("emailText"),
                             document.getElementById("emailInput"),
-                            document.getElementById("calcular")
+                            document.getElementById("calcula")
                             ];
                             var elementosDolares = [ 
                                 document.getElementById("tipoUsoDolares"),
@@ -738,7 +738,7 @@ and open the template in the editor.
                                 document.getElementById("emailSectionDolares"),
                                 document.getElementById("emailTextDolares"),
                                 document.getElementById("emailInputDolares"),
-                                document.getElementById("calcularDolares")
+                                document.getElementById("calcularDolare")
                             ];
                         
                             function toggleElements(moneda) {
@@ -748,7 +748,7 @@ and open the template in the editor.
                                     showElements(elementosPesos);
                                     hideElements(elementosDolares);
                                 } else if (moneda === "dolares") {
-                                    $("#calculadora").attr("id", "calculadoraDolares");
+                                    $("#calculadoraDolares").attr("id", "calculadoraDolares");
                                     console.log("Mostrando elementos de dólares...");
                                     hideElements(elementosPesos);
                                     showElements(elementosDolares);
