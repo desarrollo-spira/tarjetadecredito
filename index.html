@@ -490,48 +490,9 @@ and open the template in the editor.
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaTransaccionPesos" style="display:none;">
-                                <p class="control-label">Fecha de transacción</p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de transacción de la utilización." />
-                                <input type="text" id="fechaTransaccion" name="fechaTransaccion" class="js-datepicker fuenteMovil width_three" data-error="Por favor seleccione una fecha." required />
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                <div class="help-block with-errors fuenteErrorMovil"></div>
-                            </div>
-                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaCortePesos" style="display:none;">
-                                <p class="control-label">Fecha de corte</p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de corte de su tarjeta de crédito." />
-                                <input type="text" id="fechaCorte" name="fechaCorte" class="fechaCorte fuenteMovil width_three" data-error="Seleccione la fecha de corte de su tarjeta de crédito." required />
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaLimitePesos" style="display:none;">
-                                <p class="control-label">Fecha límite de pago &nbsp; </p>
-                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Fecha de limite de pago" />
-                                <input type="text" id="fechaLimitePago" name="fechaLimitePago" class="js-datepicker fuenteMovil width_three" disabled />
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
+                        
 
-                        <div class="row" id="emailSection" style="display:none;">
-                            <div class="col-md-4">Email</div>
-                        </div>
-                        <div class="row" id="emailInput" style="display:none;">
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <input class="col-md-12 col-xs-12 largo300" type="text" name="email" id="email" data-error="Por favor ingrese un correo electrónico válido, verifique que esté bien escrito y que no tenga mayúsculas o espacios." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                                        required />
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                    <div class="help-block with-errors fuenteErrorMovil"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8 text-right" id="emailText" style="display:none;">
-                                <span class="small">Ej: nombre@email.com</span>
-                            </div>
-                        </div>
+                       
                         
                          <!--TIPO DE USO DOLARES-->
                          <div class="row topBuffer20" id="tipoUsoDolaresD" style="display:none;">
@@ -642,7 +603,32 @@ and open the template in the editor.
                             </div>
                         </div>
 
+
                         <div class="row">
+                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaTransaccionPesos" style="display:none;">
+                                <p class="control-label">Fecha de transacción</p>
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de transacción de la utilización." />
+                                <input type="text" id="fechaTransaccion" name="fechaTransaccion" class="js-datepicker fuenteMovil width_three" data-error="Por favor seleccione una fecha." required />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors fuenteErrorMovil"></div>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaCortePesos" style="display:none;">
+                                <p class="control-label">Fecha de corte</p>
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Seleccione la fecha de corte de su tarjeta de crédito." />
+                                <input type="text" id="fechaCorte" name="fechaCorte" class="fechaCorte fuenteMovil width_three" data-error="Seleccione la fecha de corte de su tarjeta de crédito." required />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaLimitePesos" style="display:none;">
+                                <p class="control-label">Fecha límite de pago &nbsp; </p>
+                                <img src="assets/images/btn_pregunta_-.png" class="btnPregunta ocultar" alt="" title="Fecha de limite de pago" />
+                                <input type="text" id="fechaLimitePago" name="fechaLimitePago" class="js-datepicker fuenteMovil width_three" disabled />
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <!--<div class="row">
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaTransaccionesDolares" style="display:none;">
                                 <p class="control-label">Fecha de transacción</p>
                                 <img src="assets/images/btn_pregunta_-.png" class="btnPreguntaD ocultar" alt="" title="Seleccione la fecha de transacción de la utilización." />
@@ -663,6 +649,26 @@ and open the template in the editor.
                                 <input type="text" id="fechaLimitePago" name="fechaLimitePago" class="js-datepicker fuenteMovil width_three" disabled />
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 <div class="help-block with-errors"></div>
+                            </div>
+                        </div>-->
+
+
+                        <div class="row" id="emailSection" style="display:none;">
+                            <div class="col-md-4">Email</div>
+                        </div>
+                        <div class="row" id="emailInput" style="display:none;">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input class="col-md-12 col-xs-12 largo300" type="text" name="email" id="email" data-error="Por favor ingrese un correo electrónico válido, verifique que esté bien escrito y que no tenga mayúsculas o espacios." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                        required />
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors fuenteErrorMovil"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 text-right" id="emailText" style="display:none;">
+                                <span class="small">Ej: nombre@email.com</span>
                             </div>
                         </div>
 
@@ -715,9 +721,6 @@ and open the template in the editor.
                             document.getElementById("numeroCuotasPesos"),
                             document.getElementById("cuotasDiv"),
                             document.getElementById("valorInput"),
-                            document.getElementById("fechaTransaccionPesos"),
-                            document.getElementById("fechaCortePesos"),  
-                            document.getElementById("fechaLimitePesos"),
                             document.getElementById("emailSection"),
                             document.getElementById("emailText"),
                             document.getElementById("emailInput"),
@@ -730,25 +733,27 @@ and open the template in the editor.
                                 document.getElementById("numeroCuotasDolares"),
                                 document.getElementById("cuotasDivDolares"),
                                 document.getElementById("valorInputDolares"),
-                                document.getElementById("fechaTransaccionesDolares"),
-                                document.getElementById("fechaCortesDolares"),
-                                document.getElementById("fechaLimitesDolares"),
                                 document.getElementById("emailSectionDolares"),
                                 document.getElementById("emailTextDolares"),
                                 document.getElementById("emailInputDolares"),
                                 document.getElementById("calcularDolare")
                             ];
+                            var elementosFechas = [
+                                document.getElementById("fechaTransaccionPesos"),
+                                document.getElementById("fechaCortePesos"),
+                                document.getElementById("fechaLimitePesos")
+                            ];	
                         
                             function toggleElements(moneda) {
                                 if (moneda === "pesos") {
                                     console.log("Mostrando elementos de pesos...");
-                                    $("#calculadora").attr("id", "calculadora");
                                     showElements(elementosPesos);
+                                    showElements(elementosFechas);
                                     hideElements(elementosDolares);
                                 } else if (moneda === "dolares") {
-                                    $("#calculadoraDolares").attr("id", "calculadoraDolares");
                                     console.log("Mostrando elementos de dólares...");
                                     hideElements(elementosPesos);
+                                    showElements(elementosFechas);
                                     showElements(elementosDolares);
                                 }else {
                                     console.log("Moneda no reconocida:", moneda);
