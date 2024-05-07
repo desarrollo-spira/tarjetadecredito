@@ -25,21 +25,6 @@ $(document).ready(function () {
 		output.push('<option value="' + value[0] + '">' + value[0] + '</option>');
 	});
 
-	//$('#fechaCorte').html(output.join(''));
-	/*$('#fechaCorte').datepicker({
-        //dateFormat:'yy-mm-dd'
-        //dateFormat:'dd-mm-yy'
-        dateFormat:'dd/mm/yy'
-    }); 
-
-
-
-    
-    /*$('#calcular').click(function(event){
-        event.preventDefault();
-        calculadora.calcular();
-        $('.panelTabla').slideDown();
-    });*/
 	$('#fechaTransaccion').change(function () {
 		$('#fechaCorte').val('');
 		$('#fechaLimitePago').val('');
@@ -97,12 +82,6 @@ $(document).ready(function () {
 	$('#calculadora')
 		.validator()
 		.on('validated.bs.validator', function (e) {
-			//console.log("Validacion campo");
-			//console.log($('#panelCalculadora').height());
-			//var height = $('#panelCalculadora').height() + 50;
-			//$('#panelLateralCalculadora').height(height + "px");
-			//$('#panelLateralCalculadora').height($('#panelCalculadora').height());
-			//console.log($('#panelLateralCalculadora').height());
 			setTimeout(function () {
 				$('#panelLateralCalculadora').height($('#panelCalculadora').height());
 			}, 500);
@@ -171,12 +150,6 @@ $(document).ready(function () {
 	$('#calculadora')
 		.validator()
 		.on('validated.bs.validator', function (e) {
-			//console.log("Validacion campo");
-			//console.log($('#panelCalculadora').height());
-			//var height = $('#panelCalculadora').height() + 50;
-			//$('#panelLateralCalculadora').height(height + "px");
-			//$('#panelLateralCalculadora').height($('#panelCalculadora').height());
-			//console.log($('#panelLateralCalculadora').height());
 			setTimeout(function () {
 				$('#panelLateralCalculadora').height($('#panelCalculadora').height());
 			}, 500);
@@ -205,8 +178,4 @@ $(document).ready(function () {
 			calculadora.calcularMV();
 		}
 	});
-
-	/*$('#calculadora').submit(function(e){
-        console.log("Submit");
-    });*/
 });

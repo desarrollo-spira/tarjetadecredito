@@ -382,22 +382,6 @@ var calculadora = (function () {
 		return new Date(fecha);
 	};
 
-	/*var guardarCorreo = function(correo){
-        var formData = new FormData();
-        formData.append('correo', correo);
-        var oReq = new XMLHttpRequest();
-        oReq.open("POST", "InsertarCorreo.php", true);
-        
-        oReq.onload = function(oEvent){
-            if(oReq.status === 200){
-                console.log("Se guardaron los datos");
-            }else{
-                console.log("Ocurrio un error");
-            }
-        };
-        oReq.send(formData);
-    };*/
-
 	var guardarCorreo = function (correo) {
 		document.getElementById('div-satisfaction').style.display = 'block';
 
@@ -485,7 +469,7 @@ var calculadora = (function () {
 	};
 
 	var calcularDolares = function () {
-		var valorUSD = 3800;
+		var valorUSD = document.getElementById('valorUSD').value;
 		var ea = document.getElementById('ea').value;
 		var mv = document.getElementById('mv');
 		var tipoUsoDolares = document.getElementById('tipoUsoDolares').value;
@@ -825,22 +809,6 @@ var calculadora = (function () {
 		return new Date(fechaDolares);
 	};
 
-	/*var guardarCorreo = function(correo){
-        var formData = new FormData();
-        formData.append('correo', correo);
-        var oReq = new XMLHttpRequest();
-        oReq.open("POST", "InsertarCorreo.php", true);
-       
-        oReq.onload = function(oEvent){
-            if(oReq.status === 200){
-                console.log("Se guardaron los datos");
-            }else{
-                console.log("Ocurrio un error");
-            }
-        };
-        oReq.send(formData);
-    };*/
-
 	var guardarCorreoDolares = function (correo) {
 		document.getElementById('div-satisfaction').style.display = 'block';
 
@@ -939,20 +907,6 @@ $(document).ready(function () {
 	initComponent();
 });
 
-/*ejemplo
-$(function () {
-$(".js-datepicker").datepicker({
-onClose: function (selectedDate) {
-$("#fechaCorte").datepicker("option", "minDate", selectedDate);
-}
-});
-$("#fechaCorte").datepicker({
-onClose: function (selectedDate) {
-$(".js-datepicker").datepicker("option", "maxDate", selectedDate);
-}
-});
-});
-
 /* Fonction d'initialisation des composants */
 function initComponent() {
 	/* Fecha transacción */
@@ -990,8 +944,5 @@ function initComponent() {
 		},
 	});
 
-	//$("#dateRetrait").datepicker({buttonImage: "../../../Images/boutons/btn_calendier.png"});
-	//$("#dateRetrait").datepicker({showButtonPanel: true });
-	//$("#dateRetrait").datepicker({beforeShow: function() {setTimeout(function() {$(".ui-datepicker").css("z-index", 9999999999);}, 10);}});
 }
 });

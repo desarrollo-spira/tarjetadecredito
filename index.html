@@ -350,16 +350,6 @@ and open the template in the editor.
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            
-                        </div>
-                        <div class="row">
-                            
-                        </div>
-
-                        <div class="row">
-                            
-                        </div>
                         <div class="row topBuffer20">
                             <div class="col-md-6 col-xs-6">
                                 <p>Moneda</p>
@@ -384,8 +374,8 @@ and open the template in the editor.
                                 <p>Tipo de uso en Pesos</p>
                             </div>
                         </div>
-                        <div class="row" id="tipoUsoPesosOptions" style="display:none;">
-                            <div class="col-md-6">
+                            <div class="row" id="tipoUsoPesosOptions" style="display:none;">
+                                <div class="col-md-6 col-xs-6">
                                 <img src="assets/images/btn_pregunta_-.png" class="btnPregunta2" alt="" title="Elija el Tipo de Utilización." />
                                 <select name="tipoUsoPesos" id="tipoUsoPesos" class="tipoUso">
                                     <option value="avance">Avance</option>
@@ -489,13 +479,9 @@ and open the template in the editor.
                                 </select>
                             </div>
                         </div>
-
-                        
-
-                       
                         
                          <!--TIPO DE USO DOLARES-->
-                         <div class="row topBuffer20" id="tipoUsoDolaresD" style="display:none;">
+                        <div class="row" id="tipoUsoDolaresD" style="display:none;">
                             <div class="col-md-6 col-xs-6">
                                 <p>Tipo de uso en Dólares</p>
                             </div>
@@ -603,6 +589,21 @@ and open the template in the editor.
                             </div>
                         </div>
 
+                        <div class="row topBuffer20">
+                            <div class="col-md-6 col-xs-6" id="valorNUSD" style="display:none;">
+                                <p>Valor TRM</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6" id="valorInputUSD" style="display:none;">
+                                <div class="form-group">
+                                    <img src="assets/images/btn_pregunta_-.png" style="" class="btnPregunta" alt="" data-toogle="tooltip" title='Ingrese el valor de la TRM.' />
+                                    <input pattern="^[0-9]+$" class="largo150" type="text" id="valorUSD" data-error="Por favor, ingrese sólo números." name="valorUSD" required />
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors fuenteErrorMovil"></div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="form-group col-md-4 col-lg-4 col-xs-12 fuente20Movil" id="fechaTransaccionPesos" style="display:none;">
@@ -730,6 +731,8 @@ and open the template in the editor.
                                 document.getElementById("tipoUsoDolaresD"),
                                 document.getElementById("tipoUsoDolaresOptions"),
                                 document.getElementById("valorNDolares"),
+                                document.getElementById("valorNUSD"),
+                                document.getElementById("valorInputUSD"),
                                 document.getElementById("numeroCuotasDolares"),
                                 document.getElementById("cuotasDivDolares"),
                                 document.getElementById("valorInputDolares"),
