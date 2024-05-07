@@ -31,9 +31,17 @@ $(document).ready(function () {
 	});
 
 	$('#fechaCorte').change(function (f) {
+		var moneda = document.getElementById("moneda").value
 		if (calculadora.validarFechaTransaccion()) {
 			if (calculadora.validarFechaCorte()) {
-				calculadora.calcular();
+				if (moneda === "pesos") {
+					calculadora.calcular();
+				} else if (moneda === "dolares") {
+					calculadora.calcularDolares();
+				} else {
+					alert('No has seleccionado moneda');
+				}
+
 			} else {
 				alert('La fecha de corte no es válida');
 			}
@@ -58,7 +66,13 @@ $(document).ready(function () {
 			e.preventDefault();
 			// if (calculadora.validarFechaCorte()) {
 			// 	if (calculadora.validarFechaTransaccion() && !calculadora.validarFechaTransaccionMasunMes()) {
-			calculadora.calcular();
+			if (moneda === "pesos") {
+				calculadora.calcular();
+			} else if (moneda === "dolares") {
+				calculadora.calcularDolares();
+			} else {
+				alert('No has seleccionado moneda');
+			}
 			$('.panelTabla').slideDown();
 			// 	} else {
 			// 		if (!calculadora.validarFechaTransaccion()) {
@@ -78,74 +92,6 @@ $(document).ready(function () {
 			// }
 		});
 
-
-	$('#calculadora')
-		.validator()
-		.on('validated.bs.validator', function (e) {
-			setTimeout(function () {
-				$('#panelLateralCalculadora').height($('#panelCalculadora').height());
-			}, 500);
-		});
-
-
-		/***
-	 *
-	 * Calculadora Dolares
-	 * Eventos
-	 *
-	 * ***/
-	$('#fechaTransaccionDolares').change(function () {
-		$('#fechaCorteDolares').val('');
-		$('#fechaLimitePagoDolares').val('');
-	});
-
-	$('#fechaCorteDolares').change(function (f) {
-		if (calculadora.validarFechaTransaccion()) {
-			if (calculadora.validarFechaCorte()) {
-				calculadora.calcularDolares();
-			} else {
-				alert('La fecha de corte no es válida');
-			}
-		} else {
-			alert('La fecha de corte no es válida');
-			calculadora.validarFechaTransaccion();
-		}
-
-		if (calculadora.validarFechaTransaccionMasunMes()) {
-			alert('Fecha de Corte no corresponde con Fecha de la Transacción');
-		}
-	});
-
-	$('#calculadora')
-		.validator()
-		.on('submit', function (e) {
-			console.log('transaccion validar fecha transaccion ' + calculadora.validarFechaTransaccion());
-			console.log('transaccion validar fecha transaccion mas un mes ' + calculadora.validarFechaTransaccionMasunMes());
-
-			$('#panelLateralCalculadora').height($('#panelCalculadora').height());
-			// if (!e.isDefaultPrevented()) {
-			e.preventDefault();
-			// if (calculadora.validarFechaCorteDolares()) {
-			//  if (calculadora.validarFechaTransaccion() && !calculadora.validarFechaTransaccionMasunMes()) {
-			calculadora.calcularDolares();
-			$('.panelTabla').slideDown();
-			//  } else {
-			//      if (!calculadora.validarFechaTransaccion()) {
-			//          alert('La fecha de corte debe ser mayor a la fecha de transacción');
-			//      }
-			//      if (calculadora.validarFechaTransaccionMasunMes()) {
-			//          alert('Fecha de Corte no corresponde con Fecha de la Transacción');
-			//      }
-			//  }
-			// } else {
-			//  alert('La fecha de corte no es válida');
-			//  alert(calculadora.validarFechaTransaccion());
-			// }
-			// } else {
-			//  e.preventDefault();
-			//  console.log('invalido');
-			// }
-		});
 
 	$('#calculadora')
 		.validator()
