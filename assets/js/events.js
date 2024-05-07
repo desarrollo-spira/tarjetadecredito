@@ -25,7 +25,28 @@ $(document).ready(function () {
 		output.push('<option value="' + value[0] + '">' + value[0] + '</option>');
 	});
 
-	$('#fechaTransaccion').change(function () {
+	$('#fechaTransaccion').change(function (event) {
+
+		var moneda = document.getElementById("moneda").value
+		if (moneda === "dolares") {
+			var date = new Date();
+			var datos = event.target.value ? event.target.value.split("/") : null;
+			var fecha = datos ? datos[2] + "-" + datos[1] + "-" + datos[0] : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+			var trm = 3800;
+			$.ajax({
+				url: "https://trm-colombia.vercel.app/?date=" + fecha,
+				type: 'GET',
+				dataType: 'json', // added data type
+				success: function (data) {
+					trm = data?.data?.value ?? 3800;
+					document.getElementById('valorUSD').value = trm;
+				}, error: function (xhr, ajaxOptions, thrownError) {
+					console.log(xhr.status);
+					console.log(thrownError);
+					document.getElementById('valorUSD').value = trm;
+				}
+			});
+		}
 		$('#fechaCorte').val('');
 		$('#fechaLimitePago').val('');
 	});
@@ -66,6 +87,7 @@ $(document).ready(function () {
 			e.preventDefault();
 			// if (calculadora.validarFechaCorte()) {
 			// 	if (calculadora.validarFechaTransaccion() && !calculadora.validarFechaTransaccionMasunMes()) {
+			var moneda = document.getElementById("moneda").value
 			if (moneda === "pesos") {
 				calculadora.calcular();
 			} else if (moneda === "dolares") {
